@@ -25,8 +25,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Freelance SEO Expert | Boost Your Rankings",
-  description: "Professional SEO services to help your business grow. Technical SEO, Content Strategy, and more.",
+  title: {
+    default: "Best Freelance Digital Marketing Expert in Dubai, UAE - Habeebul Haque",
+    template: "%s | Habeebul Haque"
+  },
+  description: "Premier Freelance Digital Marketing Expert in Dubai. Specializing in SEO, PPC, and data-driven growth strategies to maximize your ROI.",
 };
 
 export default function RootLayout({

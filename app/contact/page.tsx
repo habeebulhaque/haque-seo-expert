@@ -2,8 +2,8 @@ import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from 'lucide-react';
 import ContactFaq from '@/components/ContactFaq';
 
 export const metadata = {
-    title: "Contact Me | Freelance SEO Expert",
-    description: "Get in touch for a free SEO audit or to discuss your project. I'm ready to help you grow your business.",
+    title: "Contact Habeebul Haque | Freelance Digital Marketing Consultant Dubai",
+    description: "Get in touch with Habeebul Haque for a free digital marketing consultation. Expert SEO, PPC, and Web Design services in Dubai, UAE.",
 };
 
 export default function Contact() {

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { User, Award, TrendingUp, Zap, CheckCircle, Briefcase, Globe, ShoppingBag, Shield, MapPin } from 'lucide-react';
 
 export const metadata = {
-    title: "About Me | Freelance SEO Expert",
-    description: "Learn more about my background, experience, and approach to SEO. I help businesses grow with data-driven strategies.",
+    title: "About Habeebul Haque | Freelance Digital Marketing Expert in Dubai",
+    description: "Learn about Habeebul Haque, a premier Freelance Digital Marketing Expert in Dubai with 10+ years of experience in SEO, PPC, and performance marketing.",
 };
 
 export default function About() {

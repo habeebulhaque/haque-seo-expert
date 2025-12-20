@@ -3,8 +3,8 @@ import { Check, ArrowRight, HelpCircle, X as XIcon, Minus } from 'lucide-react';
 import PricingFaq from "@/components/PricingFaq";
 
 export const metadata = {
-    title: "Pricing Plans | Freelance SEO Expert",
-    description: "Transparent pricing for SEO services. Choose the plan that fits your business goals and budget.",
+    title: "Digital Marketing Pricing Packages Dubai | SEO & PPC Plans",
+    description: "Transparent pricing for freelance digital marketing services in Dubai. Starter, Growth, and Enterprise packages for SEO, PPC, and Content Marketing.",
 };
 
 export default function Pricing() {

@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { ArrowRight, BarChart, Globe, Search, CheckCircle, TrendingUp, Mail, Phone, MapPin, Send } from 'lucide-react';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Best Freelance Digital Marketing Expert in Dubai, UAE - Habeebul Haque",
+  description: "Habeebul Haque is the best freelance digital marketing expert in Dubai, UAE, helping businesses grow with data-driven SEO, PPC, and social media strategies.",
+};
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
