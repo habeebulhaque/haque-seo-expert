@@ -24,6 +24,7 @@ import {
     RefreshCw,
     Code
 } from 'lucide-react';
+import Image from "next/image";
 import Link from 'next/link';
 import ContactForm from '@/components/ContactForm';
 import SeoFaq from '@/components/SeoFaq';
@@ -149,14 +150,18 @@ export default function SeoServices() {
                         </Link>
                     </div>
                     <div className="lg:w-1/2 relative">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop"
-                                alt="SEO Analytics Dashboard"
-                                className="w-full h-auto object-cover"
-                            />
-                            {/* Overlay to darken image slightly for better text contrast if needed, or just style */}
-                            <div className="absolute inset-0 bg-slate-900/10"></div>
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100 group">
+                            <div className="aspect-video relative">
+                                <Image
+                                    src="/services-banner-seo.png"
+                                    alt="Advanced Google Search Console & Analytics Dashboard"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors duration-500"></div>
+                            </div>
                         </div>
                         {/* Decorative elements */}
                         <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-primary/5 rounded-3xl"></div>

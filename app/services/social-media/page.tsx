@@ -15,6 +15,7 @@ import {
     Smile,
     PenTool
 } from 'lucide-react';
+import Image from "next/image";
 import Link from 'next/link';
 import ContactForm from "@/components/ContactForm";
 import SocialFaq from '@/components/SocialFaq';
@@ -86,13 +87,18 @@ export default function SocialMediaServices() {
                         </Link>
                     </div>
                     <div className="lg:w-1/2 relative">
-                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
-                            <img
-                                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1974&auto=format&fit=crop"
-                                alt="Social Media Strategy"
-                                className="w-full h-auto object-cover"
-                            />
-                            <div className="absolute inset-0 bg-slate-900/10"></div>
+                        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100 group">
+                            <div className="aspect-video relative">
+                                <Image
+                                    src="/services-banner-social.png"
+                                    alt="Social Media Marketing - Facebook & Instagram Ads Strategy"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-slate-900/0 transition-colors duration-500"></div>
+                            </div>
                         </div>
                         <div className="absolute -z-10 top-10 -right-10 w-full h-full bg-primary/5 rounded-3xl"></div>
                     </div>

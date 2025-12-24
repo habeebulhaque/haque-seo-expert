@@ -19,6 +19,7 @@ import {
     CheckCircle,
     HelpCircle
 } from 'lucide-react';
+import Image from "next/image";
 import { useState } from "react";
 
 export default function ServicesClient() {
@@ -63,27 +64,18 @@ export default function ServicesClient() {
 
                         {/* Right: Image */}
                         <div className="lg:w-1/2 relative">
-                            <div className="relative z-10 rounded-lg overflow-hidden border border-white/10 shadow-2xl shadow-primary/5">
-                                <div className="bg-gray-50 aspect-video flex items-center justify-center p-8">
-                                    {/* Abstract Dashboard UI Representation */}
-                                    <div className="w-full h-full border border-gray-200 rounded bg-white p-4 relative shadow-sm">
-                                        <div className="flex gap-4 mb-4">
-                                            <div className="w-1/3 h-24 bg-primary/10 rounded border border-primary/20"></div>
-                                            <div className="w-1/3 h-24 bg-gray-100 rounded"></div>
-                                            <div className="w-1/3 h-24 bg-gray-100 rounded"></div>
-                                        </div>
-                                        <div className="w-full h-32 bg-gray-100 rounded mb-4"></div>
-                                        <div className="flex gap-4">
-                                            <div className="w-1/2 h-20 bg-gray-100 rounded"></div>
-                                            <div className="w-1/2 h-20 bg-gray-100 rounded"></div>
-                                        </div>
-
-                                        {/* Floating Badge */}
-                                        <div className="absolute -bottom-6 -right-6 bg-white text-black p-4 rounded shadow-lg animate-bounce-slow border border-gray-100">
-                                            <div className="text-xs uppercase font-bold tracking-widest mb-1">ROI Increase</div>
-                                            <div className="text-2xl font-bold text-green-600">+300%</div>
-                                        </div>
-                                    </div>
+                            <div className="relative z-10 rounded-lg overflow-hidden border border-white/10 shadow-2xl shadow-primary/5 group">
+                                <div className="aspect-video relative">
+                                    <Image
+                                        src="/services-banner.png"
+                                        alt="Modern Digital Marketing Analytics Dashboard"
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                        priority
+                                    />
+                                    {/* Glassmorphism Overlay for depth */}
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 </div>
                             </div>
                             {/* Glow Effect */}
