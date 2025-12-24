@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from 'lucide-react';
+import ContactForm from "@/components/ContactForm";
 import ContactFaq from '@/components/ContactFaq';
 
 export const metadata = {
@@ -149,7 +150,7 @@ export default function Contact() {
                         <h3 className="text-2xl font-bold mb-2 text-slate-900 font-serif">Send us a Message</h3>
                         <p className="text-slate-500 mb-8">Fill out the form below and we&apos;ll get back to you shortly.</p>
 
-                        <form className="space-y-6">
+                        <ContactForm serviceName="General Inquiry">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-2">
@@ -157,7 +158,9 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="text"
+                                        name="name"
                                         id="name"
+                                        required
                                         className="w-full bg-slate-50 border border-gray-200 p-4 text-slate-900 focus:outline-none focus:border-primary focus:bg-white transition-all rounded-lg"
                                         placeholder="John Doe"
                                     />
@@ -168,7 +171,9 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="email"
+                                        name="email"
                                         id="email"
+                                        required
                                         className="w-full bg-slate-50 border border-gray-200 p-4 text-slate-900 focus:outline-none focus:border-primary focus:bg-white transition-all rounded-lg"
                                         placeholder="john@example.com"
                                     />
@@ -182,7 +187,9 @@ export default function Contact() {
                                     </label>
                                     <input
                                         type="tel"
+                                        name="phone"
                                         id="phone"
+                                        required
                                         className="w-full bg-slate-50 border border-gray-200 p-4 text-slate-900 focus:outline-none focus:border-primary focus:bg-white transition-all rounded-lg"
                                         placeholder="+1 (555) 000-0000"
                                     />
@@ -192,6 +199,7 @@ export default function Contact() {
                                         Subject
                                     </label>
                                     <select
+                                        name="subject"
                                         id="subject"
                                         className="w-full bg-slate-50 border border-gray-200 p-4 text-slate-900 focus:outline-none focus:border-primary focus:bg-white transition-all rounded-lg appearance-none"
                                     >
@@ -209,7 +217,9 @@ export default function Contact() {
                                     Message <span className="text-red-500">*</span>
                                 </label>
                                 <textarea
+                                    name="message"
                                     id="message"
+                                    required
                                     rows={6}
                                     className="w-full bg-slate-50 border border-gray-200 p-4 text-slate-900 focus:outline-none focus:border-primary focus:bg-white transition-all resize-none rounded-lg"
                                     placeholder="Tell us about your project goals, budget, and timeline..."
@@ -222,7 +232,7 @@ export default function Contact() {
                             >
                                 <Send className="w-5 h-5" /> Send Message
                             </button>
-                        </form>
+                        </ContactForm>
                     </div>
                 </div>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 import { ArrowRight, BarChart, Globe, Search, CheckCircle, TrendingUp, Mail, Phone, MapPin, Send } from 'lucide-react';
 
 import { Metadata } from 'next';
@@ -34,7 +35,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-6 animate-fade-in-up delay-300">
-            <Link href="/contact" className="bg-primary hover:bg-black hover:text-white text-white px-10 py-4 rounded-sm font-bold transition-all uppercase tracking-wider text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1">
+            <Link href="#audit-form" className="bg-primary hover:bg-black hover:text-white text-white px-10 py-4 rounded-sm font-bold transition-all uppercase tracking-wider text-sm flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-1">
               Get a Free Audit
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -58,7 +59,7 @@ export default function Home() {
               { label: 'Revenue Generated', value: '275K AED' },
               { label: 'Keywords Ranked', value: '5k+' },
               { label: 'Client Retention', value: '98%' },
-              { label: 'Years Experience', value: '7+' },
+              { label: 'Years Experience', value: '10+' },
             ].map((stat, index) => (
               <div key={index} className="px-4">
                 <div className="text-3xl md:text-4xl font-bold text-primary mb-1 font-serif">{stat.value}</div>
@@ -199,7 +200,7 @@ export default function Home() {
       <div className="w-full h-px bg-gray-200 my-10"></div>
 
       {/* CTA / Contact Section */}
-      <section className="py-12 bg-primary relative overflow-hidden">
+      <section id="audit-form" className="py-12 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="bg-white shadow-2xl flex flex-col lg:flex-row">
@@ -225,27 +226,27 @@ export default function Home() {
 
             <div className="lg:w-1/2 p-12 lg:p-16 bg-white">
               <h3 className="text-2xl font-bold mb-6 text-black font-serif">Get Your Free Audit</h3>
-              <form className="space-y-6">
+              <ContactForm serviceName="Home Page Audit">
                 <div>
                   <label htmlFor="name" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Name</label>
-                  <input type="text" id="name" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" />
+                  <input type="text" name="name" id="name" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="John Doe" required />
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Email</label>
-                  <input type="email" id="email" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" />
+                  <input type="email" name="email" id="email" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="john@example.com" required />
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Phone Number</label>
-                  <input type="tel" id="phone" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 000-0000" />
+                  <input type="tel" name="phone" id="phone" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="+1 (555) 000-0000" required />
                 </div>
                 <div>
                   <label htmlFor="website" className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Website</label>
-                  <input type="url" id="website" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="https://example.com" />
+                  <input type="url" name="website" id="website" className="w-full bg-gray-50 border border-gray-200 p-4 text-black focus:outline-none focus:border-primary transition-colors" placeholder="https://example.com" />
                 </div>
                 <button type="submit" className="w-full bg-primary hover:bg-black hover:text-white text-black font-bold py-4 uppercase tracking-wider transition-all">
                   Book Now
                 </button>
-              </form>
+              </ContactForm>
             </div>
           </div>
         </div>

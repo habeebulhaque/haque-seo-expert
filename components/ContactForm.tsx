@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, CheckCircle } from "lucide-react";
 
 interface ContactFormProps {
     serviceName: string;
@@ -10,6 +10,7 @@ interface ContactFormProps {
 
 export default function ContactForm({ serviceName, children }: ContactFormProps) {
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -25,6 +26,8 @@ export default function ContactForm({ serviceName, children }: ContactFormProps)
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...data, service: serviceName }),
             });
+
+            setIsSuccess(true);
 
             // 2. Wait 1 second
             await new Promise(resolve => setTimeout(resolve, 1000));
@@ -47,6 +50,18 @@ export default function ContactForm({ serviceName, children }: ContactFormProps)
             setIsSubmitting(false);
         }
     };
+
+    if (isSuccess) {
+        return (
+            <div className="flex flex-col items-center justify-center p-8 bg-green-50 rounded-lg border border-green-100 text-center min-h-[300px]">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <CheckCircle className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Message Sent!</h3>
+                <p className="text-slate-600">Redirecting to WhatsApp to complete your inquiry...</p>
+            </div>
+        );
+    }
 
     return (
         <form onSubmit={handleSubmit} className="space-y-6 relative">

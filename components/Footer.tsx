@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook } from 'lucide-react';
 
 export default function Footer() {
     return (
@@ -59,9 +59,9 @@ export default function Footer() {
                             </li>
                         </ul>
                         <div className="flex gap-4 mt-6">
-                            <Link href="#" className="text-gray-400 hover:text-black transition-colors"><Twitter className="w-5 h-5" /></Link>
-                            <Link href="#" className="text-gray-400 hover:text-black transition-colors"><Linkedin className="w-5 h-5" /></Link>
-                            <Link href="#" className="text-gray-400 hover:text-black transition-colors"><Github className="w-5 h-5" /></Link>
+                            <Link href="https://x.com/ihabeebulhaque" className="text-gray-400 hover:text-black transition-colors" target="_blank" rel="noopener noreferrer"><Twitter className="w-5 h-5" /></Link>
+                            <Link href="https://www.linkedin.com/in/habeebulhaque" className="text-gray-400 hover:text-black transition-colors" target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5" /></Link>
+                            <Link href="https://www.facebook.com/haquebasheer" className="text-gray-400 hover:text-black transition-colors" target="_blank" rel="noopener noreferrer"><Facebook className="w-5 h-5" /></Link>
                         </div>
                     </div>
                 </div>
