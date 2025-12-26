@@ -3,7 +3,9 @@ import ContactForm from "@/components/ContactForm";
 import ContactFaq from '@/components/ContactFaq';
 
 export const metadata = {
-    title: "Contact Habeebul Haque | Freelance Digital Marketing Consultant Dubai",
+    title: {
+        absolute: "Contact | Freelance Digital Marketing Consultant Dubai - Habeebul Haque"
+    },
     description: "Get in touch with Habeebul Haque for a free digital marketing consultation. Expert SEO, PPC, and Web Design services in Dubai, UAE.",
 };
 
